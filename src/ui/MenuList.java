@@ -607,6 +607,325 @@ public class MenuList extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
+        jLabel1.setText("Menu List");
+
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jLabel2.setText("Arrange Item Name by:");
+
+        jcbox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "---Select---", "A-Z", "Z-A", "Default", " " }));
+
+        jButton1.setText("Apply");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel3.setText("Foods");
+
+        jLabel4.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel4.setText("Drinks");
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"D001", "Ice Lemon Tea", "RM5.50"},
+                {"D002", "Coca-cola", "RM3.50"},
+                {"D003", "Sprite", "RM3.50"},
+                {"D004", "100 Plus", "RM2.50"},
+                {"D005", "Hot Chocolate", "RM6.50"},
+                {"D006", "Sky Juice", "RM1.00"}
+            },
+            new String [] {
+                "Menu  Code", "Item Name", "Price"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        jLabel5.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel5.setText("Popular Product");
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"F001", "Burger", "RM15.00"},
+                {"F002", "Pizza", "RM22.80"},
+                {"F003", "Chicken Chop", "RM28.90"},
+                {"F006", "Beef Steak", "RM46.00"},
+                {"F007", "Fish & Chip", "RM32.50"},
+                {"F008", "Lamb Chop", "RM46.00"}
+            },
+            new String [] {
+                "Menu Code", "Item Name", "Price"
+            }
+        ));
+        jScrollPane3.setViewportView(jTable2);
+
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Menu Code", "Item Name", "Price"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable3);
+
+        jButton2.setText("Add to Popular Product");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("Remove Popular Product");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel3)
+                                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 301, Short.MAX_VALUE)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jcbox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(319, 319, 319)
+                        .addComponent(jLabel1)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(158, 158, 158)
+                        .addComponent(jButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 315, Short.MAX_VALUE)
+                        .addComponent(jButton3)))
+                .addContainerGap())
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jcbox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton3))
+                .addContainerGap(36, Short.MAX_VALUE))
+        );
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        if (jcbox1.getSelectedItem().equals("A-Z")) {
+
+            TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(jTable2.getModel());
+            jTable2.setRowSorter(sorter);
+            List<RowSorter.SortKey> sortKeys = new ArrayList<>(25);
+            sortKeys.add(new RowSorter.SortKey(1, SortOrder.ASCENDING));
+            sorter.setSortKeys(sortKeys);
+
+            TableRowSorter<TableModel> sorter1 = new TableRowSorter<TableModel>(jTable1.getModel());
+            jTable1.setRowSorter(sorter1);
+            List<RowSorter.SortKey> sortKeys1 = new ArrayList<>(25);
+            sortKeys1.add(new RowSorter.SortKey(1, SortOrder.ASCENDING));
+            sorter1.setSortKeys(sortKeys1);
+
+            TableRowSorter<TableModel> sorter2 = new TableRowSorter<TableModel>(jTable3.getModel());
+            jTable3.setRowSorter(sorter2);
+            List<RowSorter.SortKey> sortKeys2 = new ArrayList<>(25);
+            sortKeys2.add(new RowSorter.SortKey(1, SortOrder.ASCENDING));
+            sorter2.setSortKeys(sortKeys2);
+
+        } else if (jcbox1.getSelectedItem().equals("Z-A")) {
+            TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(jTable2.getModel());
+            jTable2.setRowSorter(sorter);
+            List<RowSorter.SortKey> sortKeys = new ArrayList<>(25);
+            sortKeys.add(new RowSorter.SortKey(1, SortOrder.DESCENDING));
+            sorter.setSortKeys(sortKeys);
+
+            TableRowSorter<TableModel> sorter1 = new TableRowSorter<TableModel>(jTable1.getModel());
+            jTable1.setRowSorter(sorter1);
+            List<RowSorter.SortKey> sortKeys1 = new ArrayList<>(25);
+            sortKeys1.add(new RowSorter.SortKey(1, SortOrder.DESCENDING));
+            sorter1.setSortKeys(sortKeys1);
+
+            TableRowSorter<TableModel> sorter2 = new TableRowSorter<TableModel>(jTable3.getModel());
+            jTable3.setRowSorter(sorter2);
+            List<RowSorter.SortKey> sortKeys2 = new ArrayList<>(25);
+            sortKeys2.add(new RowSorter.SortKey(1, SortOrder.DESCENDING));
+            sorter2.setSortKeys(sortKeys2);
+
+        } else if (jcbox1.getSelectedItem().equals("Default")) {
+            TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(jTable2.getModel());
+            jTable2.setRowSorter(sorter);
+            List<RowSorter.SortKey> sortKeys = new ArrayList<>(25);
+            sortKeys.add(new RowSorter.SortKey(1, SortOrder.UNSORTED));
+            sorter.setSortKeys(sortKeys);
+
+            TableRowSorter<TableModel> sorter1 = new TableRowSorter<TableModel>(jTable1.getModel());
+            jTable1.setRowSorter(sorter1);
+            List<RowSorter.SortKey> sortKeys1 = new ArrayList<>(25);
+            sortKeys1.add(new RowSorter.SortKey(1, SortOrder.UNSORTED));
+            sorter1.setSortKeys(sortKeys1);
+
+            TableRowSorter<TableModel> sorter2 = new TableRowSorter<TableModel>(jTable3.getModel());
+            jTable3.setRowSorter(sorter2);
+            List<RowSorter.SortKey> sortKeys2 = new ArrayList<>(25);
+            sortKeys2.add(new RowSorter.SortKey(1, SortOrder.UNSORTED));
+            sorter2.setSortKeys(sortKeys2);
+        } else {
+            JOptionPane.showMessageDialog(null, "Please choose an option from selections given", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
+        if (jTable2.getSelectionModel().isSelectionEmpty() && jTable1.getSelectionModel().isSelectionEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please choose items to add in Popular Product", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+        TableModel m1 = jTable2.getModel();
+        int[] index1 = jTable2.getSelectedRows();
+        Object[] row1 = new Object[3];
+        DefaultTableModel model1 = (DefaultTableModel) jTable3.getModel();
+        for (int i = 0; i < index1.length; i++) {
+            index1[i] = jTable2.convertRowIndexToModel(index1[i]);
+            for (i = 0; i < index1.length; i++) {
+                row1[0] = m1.getValueAt(index1[i], 0);
+                row1[1] = m1.getValueAt(index1[i], 1);
+                row1[2] = m1.getValueAt(index1[i], 2);
+                model1.addRow(row1);
+            }
+        }
+        
+        TableModel m2 = jTable1.getModel();
+        int[] index2 = jTable1.getSelectedRows();
+        Object[] row2 = new Object[3];
+        DefaultTableModel model2 = (DefaultTableModel) jTable3.getModel();
+        for (int i = 0; i < index2.length; i++) {
+            index2[i] = jTable1.convertRowIndexToModel(index2[i]);
+            for (i = 0; i < index2.length; i++) {
+                row2[0] = m2.getValueAt(index2[i], 0);
+                row2[1] = m2.getValueAt(index2[i], 1);
+                row2[2] = m2.getValueAt(index2[i], 2);
+                model2.addRow(row2);
+            }
+        }
+
+
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+
+        if (jTable3.getSelectionModel().isSelectionEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please choose items to remove from Popular Product", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        
+        DefaultTableModel model3 = (DefaultTableModel) jTable3.getModel();
+        int index3 = jTable3.getSelectedRow();
+        index3 = jTable3.convertRowIndexToModel(index3);
+        model3.removeRow(index3);
+
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(MenuList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(MenuList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(MenuList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(MenuList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new MenuList().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
     private javax.swing.JComboBox jcbox1;
     // End of variables declaration//GEN-END:variables
 }
